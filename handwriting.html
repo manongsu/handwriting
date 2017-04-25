@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>handwriting</title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
+    <script src="js/jquery.js"></script>
+    <script src="js/handwriting.js"></script>
+    <style>
+        *{margin:0;padding:0;}
+        ul,li{list-style: none;}
+        h1{margin: 20px;}
+        canvas{float: left;cursor: pointer;}
+        .setting{float: left;width: 500px;height: 300px;border: 1px solid #ccc;margin-left: 50px;}
+        .setting input{height: 33px;width: 200px;font-size: 20px;}
+        .setting h4{margin: 6px 0;}
+        .penColor,.penWidth{height: 130px;padding: 10px;}
+        .penColor ul{overflow: hidden;width:240px;}
+        .penColor ul li{width: 18px;height: 18px;margin:10px 10px 0px 0;border: 1px solid #ccc;float: left;}
+    </style>
+</head>
+<body>
+    <h1>Html5-Canvas 涂鸦</h1>
+    <!--画布-->
+    <canvas style="border: 1px solid #ccc;" width="500" height="500" id="handwriting"></canvas>
+    <!--相关设置-->
+    <div class="setting">
+        <div class="penColor">
+            <h4>设置画笔颜色</h4>
+            <!--<input type="text" placeholder="请输入十六进制的颜色值"/>-->
+            <input class="colorInput" type="color" placeholder="请输入十六进制的颜色值" value="#ff0000"/>
+        </div>
+        <div class="penWidth">
+            <h4>设置画笔粗细</h4>
+            <input class="widthInput" type="number" placeholder="" value="4"/>
+        </div>
+    </div>
+</body>
+</html>
